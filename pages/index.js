@@ -14,7 +14,6 @@ export default function Home() {
   } = useForm();
   const onSubmit = (data) => {
     dummy.data.push(data);
-    console.log(data);
   };
   let sum = data.reduce((total, cur) => {
     let totalTime = total + parseFloat(cur.duration);
@@ -65,7 +64,7 @@ export default function Home() {
 
       <p>Hi {toName},</p>
       <p>Please go through my daily report .</p>
-      {data.map((task, i) => (
+      {data?.map((task, i) => (
         <Projects key={i} task={task} number={i} />
       ))}
 
@@ -81,7 +80,9 @@ const Projects = ({ task, number }) => {
         {number + 1}. Project name: {task.projectName}
       </p>
       <p className="strong">Task</p>
-      <p>{task.projectName} | WP | Theme integration </p>
+      <p>
+        {task.projectName} | WP | {task.task}
+      </p>
       <p className="strong">Time</p>
       <p>{task.duration} hours</p>
     </div>
