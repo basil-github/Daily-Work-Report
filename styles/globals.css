@@ -14,3 +14,25 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.card_main {
+  border: 1px solid #c9c9c9ab;
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+  border-radius: 5px;
+  min-width: 270px;
+  max-width: 280px;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+.editor_main {
+  padding-top: 20px;
+}
+
+.editor_main form {
+  margin-top: 25px;
+}

@@ -114,3 +114,11 @@
     flex-direction: column;
   }
 }
+
+.card_main {
+  border: 1px solid #c9c9c9ab;
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+  border-radius: 5px;
+}
