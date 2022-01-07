@@ -20,9 +20,8 @@ export default function Home() {
     return totalTime;
   }, 0);
   let arr = sum.toString().split(".");
-  let hour = parseInt(arr[0]) + " hrs";
-  let min = parseInt(arr[1]) + " min";
-  if (parseInt(min) > 60) {
+  let min = parseInt(arr[1]);
+  if (parseInt(min.toString().slice(0, 2)) > 60) {
     sum = sum + 1;
     sum = sum - 0.6;
   }
@@ -68,7 +67,9 @@ export default function Home() {
         <Projects key={i} task={task} number={i} />
       ))}
 
-      <p className="strong">Total hours worked today: {sum} hrs</p>
+      <p className="strong">
+        Total hours worked today: {sum.toString().slice(0, 5)} hrs
+      </p>
     </div>
   );
 }
